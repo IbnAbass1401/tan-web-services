@@ -21,6 +21,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@layer components {
+  /* Hover effects only run on devices with a real mouse.
+     Touch screens never get stuck hover states. */
+  @media (hover: hover) and (pointer: fine) {
+    .lift {
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 40px -18px rgba(31, 111, 139, 0.45);
+      }
+    }
+
+    /* Cursor-follow glow. A small script sets --mx and --my. */
+    .spotlight {
+      position: relative;
+      isolation: isolate;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(111, 177, 196, 0.3),
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        pointer-events: none;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
