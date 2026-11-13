@@ -23,6 +23,31 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Floating motion only for people who have not asked for less motion */
+@media (prefers-reduced-motion: no-preference) {
+  .float {
+    animation: float-y 6s ease-in-out infinite;
+  }
+  .float-slow {
+    animation: float-y 8s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+  .float-delay {
+    animation: float-y 7s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+}
+
 @layer components {
   .lift {
     transition:
@@ -67,7 +92,6 @@ body {
     scroll-behavior: auto;
   }
   * {
-    animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
 }

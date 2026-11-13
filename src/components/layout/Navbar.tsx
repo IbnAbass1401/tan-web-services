@@ -43,7 +43,7 @@ export function Navbar() {
           : "border-transparent"
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">
+      <Container className="flex h-16 items-center justify-between gap-4 sm:h-18">
         <Link
           href="/"
           aria-label={`${siteConfig.name} home`}
