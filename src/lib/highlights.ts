@@ -6,7 +6,7 @@ export const highlights: Highlight[] = [
   { label: "Business websites", kind: "get" },
   { label: "For restaurants", kind: "for" },
   { label: "Online ordering pages", kind: "get" },
-  { label: "For schools and madrasahs", kind: "for" },
+  { label: "For schools", kind: "for" },
   { label: "Online stores", kind: "get" },
   { label: "For hotels and event venues", kind: "for" },
   { label: "Secure Paystack payments", kind: "get" },
