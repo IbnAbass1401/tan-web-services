@@ -11,7 +11,7 @@ export const highlights: Highlight[] = [
   { label: "For hotels and event venues", kind: "for" },
   { label: "Secure Paystack payments", kind: "get" },
   { label: "For shops and online brands", kind: "for" },
-  { label: "School and madrasah portals", kind: "get" },
+  { label: "School portals", kind: "get" },
   { label: "For trainers and academies", kind: "for" },
   { label: "Parent and teacher logins", kind: "get" },
   { label: "For startups", kind: "for" },
