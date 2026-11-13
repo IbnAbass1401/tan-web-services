@@ -91,7 +91,7 @@ export function Hero() {
             className="text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-5xl lg:text-6xl"
           >
             We Build Digital Experiences That Move Businesses{" "}
-            <span className="bg-gradient-to-r from-ocean to-[#3d9ab8] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-ocean to-[#3d9ab8] bg-clip-text text-transparent">
               Forward.
             </span>
           </h1>

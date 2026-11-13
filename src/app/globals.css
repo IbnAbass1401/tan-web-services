@@ -33,7 +33,30 @@ body {
   }
 }
 
-/* Floating motion only for people who have not asked for less motion */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Default (reduced motion): a still, centred, wrapping row */
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-inline: 1.25rem;
+}
+
+.marquee-group[aria-hidden="true"] {
+  display: none;
+}
+
+/* Motion only for people who have not asked for less motion */
 @media (prefers-reduced-motion: no-preference) {
   .float {
     animation: float-y 6s ease-in-out infinite;
@@ -45,6 +68,45 @@ body {
   .float-delay {
     animation: float-y 7s ease-in-out infinite;
     animation-delay: -4s;
+  }
+
+  .marquee {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+
+  .marquee-group {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    padding-inline: 0;
+    padding-right: 0.75rem;
+  }
+
+  .marquee-group[aria-hidden="true"] {
+    display: flex;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
   }
 }
 
