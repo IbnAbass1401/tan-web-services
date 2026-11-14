@@ -7,7 +7,7 @@ import { emailLink, siteConfig, whatsappLink } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
 
 const nextSteps = [
-  "You send your message. It opens in WhatsApp.",
+  "You send your message by WhatsApp or email.",
   "We reply, ask the right questions and agree the scope and price.",
   `We start. ${pricingTerms.payment}`,
 ];
@@ -29,11 +29,11 @@ export function Contact() {
           id="contact-title"
           eyebrow="Contact"
           title="Let's build something that moves your business forward"
-          description="Tell us what you need. We will get back to you on WhatsApp."
+          description="Tell us what you need. Choose WhatsApp or email and we will get back to you."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-5">
-          <div className="flex flex-col gap-7 rounded-3xl bg-gradient-to-br from-navy to-[#12485c] p-7 text-white shadow-[0_30px_60px_-30px_rgba(11,42,54,0.8)] sm:p-9 lg:col-span-2">
+          <div className="flex flex-col gap-7 rounded-3xl bg-linear-to-br from-navy to-[#12485c] p-7 text-white shadow-[0_30px_60px_-30px_rgba(11,42,54,0.8)] sm:p-9 lg:col-span-2">
             <div className="flex flex-col gap-4">
               <h3 className="text-xl font-extrabold">Talk to us directly</h3>
 
@@ -104,7 +104,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-mist-soft bg-white p-6 shadow-[0_20px_50px_-30px_rgba(31,111,139,0.5)] sm:p-9 lg:col-span-3">
+          <div className="relative rounded-3xl border border-mist-soft bg-white p-6 shadow-[0_20px_50px_-30px_rgba(31,111,139,0.5)] sm:p-9 lg:col-span-3">
             <ContactForm />
           </div>
         </div>
