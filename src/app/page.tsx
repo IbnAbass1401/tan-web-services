@@ -1,7 +1,9 @@
+import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
 import { HighlightStrip } from "@/components/sections/HighlightStrip";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Services } from "@/components/sections/Services";
+import { WhyTan } from "@/components/sections/WhyTan";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <HighlightStrip />
       <Services />
       <HowItWorks />
+      <About />
+      <WhyTan />
     </main>
   );
 }

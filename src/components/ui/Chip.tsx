@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 type ChipProps = {
   children: React.ReactNode;
-  tone?: "soft" | "white" | "dark";
+  tone?: "soft" | "white" | "dark" | "onDark";
   dot?: boolean;
   className?: string;
 };
@@ -12,6 +12,7 @@ const tones = {
   white:
     "border border-mist-soft bg-white text-navy shadow-[0_8px_24px_-12px_rgba(31,111,139,0.35)]",
   dark: "bg-navy text-white",
+  onDark: "border border-white/15 bg-white/10 text-white",
 };
 
 export function Chip({

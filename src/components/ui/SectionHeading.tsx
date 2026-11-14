@@ -31,7 +31,7 @@ export function SectionHeading({
         className
       )}
     >
-      {eyebrow && <Chip tone={isDark ? "dark" : "soft"}>{eyebrow}</Chip>}
+      {eyebrow && <Chip tone={isDark ? "onDark" : "soft"}>{eyebrow}</Chip>}
       <h2
         id={id}
         className={cn(

@@ -177,7 +177,7 @@ function SceneGrow() {
           <div key={b.label} className="flex flex-col items-center gap-2">
             <div
               className={cn(
-                "grow-y w-16 rounded-t-xl bg-gradient-to-t from-ocean to-teal-light sm:w-20",
+                "grow-y w-16 rounded-t-xl bg-linear-to-t from-ocean to-teal-light sm:w-20",
                 b.h
               )}
               style={delay(0.2 + i * 0.45)}
@@ -265,9 +265,9 @@ export function ProcessPlayer() {
   return (
     <div
       ref={rootRef}
-      className="overflow-hidden rounded-3xl bg-gradient-to-br from-navy to-[#12485c] p-4 text-white shadow-[0_30px_60px_-30px_rgba(11,42,54,0.8)] sm:p-6"
+      className="overflow-hidden rounded-3xl bg-linear-to-br from-navy to-[#12485c] p-4 text-white shadow-[0_30px_60px_-30px_rgba(11,42,54,0.8)] sm:p-6"
     >
-      <div className="flex min-h-[17rem] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#0a2430] py-8 sm:min-h-[20rem]">
+      <div className="flex min-h-68 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#0a2430] py-8 sm:min-h-80">
         <div aria-hidden="true" key={index} className="flex w-full justify-center">
           {scenes[index]}
         </div>
