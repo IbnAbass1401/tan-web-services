@@ -1,4 +1,5 @@
 import { About } from "@/components/sections/About";
+import { Contact } from "@/components/sections/Contact";
 import { Faq } from "@/components/sections/Faq";
 import { Hero } from "@/components/sections/Hero";
 import { HighlightStrip } from "@/components/sections/HighlightStrip";
@@ -20,6 +21,7 @@ export default function Home() {
       <Works />
       <PricingTeaser />
       <Faq limit={5} />
+      <Contact />
     </main>
   );
 }
