@@ -1,7 +1,9 @@
 import { About } from "@/components/sections/About";
+import { Faq } from "@/components/sections/Faq";
 import { Hero } from "@/components/sections/Hero";
 import { HighlightStrip } from "@/components/sections/HighlightStrip";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { PricingTeaser } from "@/components/sections/PricingTeaser";
 import { Services } from "@/components/sections/Services";
 import { Works } from "@/components/sections/Works";
 import { WhyTan } from "@/components/sections/WhyTan";
@@ -16,6 +18,8 @@ export default function Home() {
       <About />
       <WhyTan />
       <Works />
+      <PricingTeaser />
+      <Faq limit={5} />
     </main>
   );
 }
