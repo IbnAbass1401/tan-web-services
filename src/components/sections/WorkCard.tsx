@@ -71,17 +71,11 @@ export function WorkCard({ work }: { work: Work }) {
           </p>
         )}
 
-        <div className="mt-auto flex flex-wrap gap-3 pt-2">
-          <Button href={work.liveUrl} arrow>
+        <div className="mt-auto pt-2">
+          <Button href={work.liveUrl} arrow className="w-full sm:w-auto">
             Visit live demo
             <span className="sr-only"> (opens in a new tab)</span>
           </Button>
-          {work.repoUrl && (
-            <Button href={work.repoUrl} variant="secondary">
-              View code
-              <span className="sr-only"> (opens in a new tab)</span>
-            </Button>
-          )}
         </div>
       </div>
     </li>
