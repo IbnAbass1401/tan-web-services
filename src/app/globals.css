@@ -39,6 +39,35 @@ body {
   }
 }
 
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes grow-y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* Default (reduced motion): a still, centred, wrapping row */
 .marquee {
   overflow: hidden;
@@ -68,6 +97,21 @@ body {
   .float-delay {
     animation: float-y 7s ease-in-out infinite;
     animation-delay: -4s;
+  }
+
+  .pop {
+    animation: pop-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: var(--d, 0s);
+  }
+  .grow-y {
+    transform-origin: bottom;
+    animation: grow-y 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: var(--d, 0s);
+  }
+  .grow-x {
+    transform-origin: left;
+    animation: grow-x 0.7s ease-out both;
+    animation-delay: var(--d, 0s);
   }
 
   .marquee {
