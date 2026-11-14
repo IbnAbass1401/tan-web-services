@@ -8,7 +8,8 @@ export type Work = {
   liveUrl: string;
   repoUrl?: string;
   note?: string;
-  image?: string; // added in Step 11, e.g. "/images/works/ember.webp"
+  image: string;
+  imageAlt: string;
 };
 
 // All three are live. Each is labelled "Live demo" on the site.
@@ -24,6 +25,8 @@ export const works: Work[] = [
     liveUrl: "https://ember-menswear.vercel.app",
     repoUrl: "https://github.com/IbnAbass1401/Ember-menswear",
     note: "Payments run in Paystack test mode.",
+    image: "/images/works/ember.webp",
+    imageAlt: "Ember men's fashion store home page",
   },
   {
     id: "schoolbridge",
@@ -35,6 +38,8 @@ export const works: Work[] = [
     tech: ["Next.js", "TypeScript", "Express", "MongoDB"],
     liveUrl: "https://schoolbridge-vit.vercel.app",
     note: "Uses a clearly labelled demo payment provider. No real money moves.",
+    image: "/images/works/schoolbridge.webp",
+    imageAlt: "SchoolBridge landing page with a quick fee quote form",
   },
   {
     id: "car-haven",
@@ -47,6 +52,8 @@ export const works: Work[] = [
     liveUrl: "https://car-haven-sandy.vercel.app",
     repoUrl: "https://github.com/IbnAbass1401/Car-Haven",
     note: "Demo data. No login.",
+    image: "/images/works/car-haven.webp",
+    imageAlt: "Car Haven home page with a featured sports car",
   },
 ];
 

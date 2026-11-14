@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { HighlightStrip } from "@/components/sections/HighlightStrip";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Services } from "@/components/sections/Services";
+import { Works } from "@/components/sections/Works";
 import { WhyTan } from "@/components/sections/WhyTan";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <HowItWorks />
       <About />
       <WhyTan />
+      <Works />
     </main>
   );
 }
