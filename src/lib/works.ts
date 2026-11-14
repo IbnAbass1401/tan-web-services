@@ -4,7 +4,7 @@ export type Work = {
   tagline: string;
   category: string;
   description: string;
-  tech: string[];
+  features: string[];
   liveUrl: string;
   note?: string;
   image: string;
@@ -20,7 +20,7 @@ export const works: Work[] = [
     category: "E-commerce",
     description:
       "A full-stack men's fashion store: browse, pick a size, check out and pay, with an admin area to run it.",
-    tech: ["Next.js", "Express", "MongoDB", "Paystack", "Cloudinary"],
+    features: ["Online store", "Secure payments", "Admin dashboard"],
     liveUrl: "https://ember-menswear.vercel.app",
     note: "Payments run in Paystack test mode.",
     image: "/images/works/ember.webp",
@@ -33,7 +33,11 @@ export const works: Work[] = [
     category: "Payments web app",
     description:
       "A parent pays in naira and gets a ticket code. The child verifies it with their own account and receives a receipt.",
-    tech: ["Next.js", "TypeScript", "Express", "MongoDB"],
+    features: [
+      "Parent and student accounts",
+      "Payment tracking",
+      "Printable receipts",
+    ],
     liveUrl: "https://schoolbridge-vit.vercel.app",
     note: "Uses a clearly labelled demo payment provider. No real money moves.",
     image: "/images/works/schoolbridge.webp",
@@ -46,7 +50,7 @@ export const works: Work[] = [
     category: "Listings web app",
     description:
       "A dark-themed car listings app. Browse featured cars, open a full listing, add a car with a photo, edit it or delete it.",
-    tech: ["React", "Vite", "Tailwind CSS", "React Router"],
+    features: ["Browse listings", "Add and edit cars", "Photo upload"],
     liveUrl: "https://car-haven-sandy.vercel.app",
     note: "Demo data. No login.",
     image: "/images/works/car-haven.webp",

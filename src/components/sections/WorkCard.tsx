@@ -42,12 +42,24 @@ export function WorkCard({ work }: { work: Work }) {
         <p className="text-pretty text-navy/75">{work.description}</p>
 
         <ul className="flex flex-wrap gap-2">
-          {work.tech.map((t) => (
+          {work.features.map((f) => (
             <li
-              key={t}
-              className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy/70"
+              key={f}
+              className="inline-flex items-center gap-1.5 rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy/75"
             >
-              {t}
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-3.5 w-3.5 text-ocean"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              {f}
             </li>
           ))}
         </ul>
