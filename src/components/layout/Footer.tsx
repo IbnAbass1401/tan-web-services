@@ -3,12 +3,15 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { navItems } from "@/lib/nav";
 import { emailLink, siteConfig, whatsappLink } from "@/lib/site";
+import { CurrentYear } from "./CurrentYear";
 
 const linkClass =
   "inline-flex min-h-11 items-center rounded text-white/75 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-light";
 
 export function Footer() {
-  const wa = whatsappLink("Hello TAN Web Services, I would like to ask about a project.");
+  const wa = whatsappLink(
+    "Hello TAN Web Services, I would like to ask about a project."
+  );
   const mail = emailLink();
 
   return (
@@ -60,7 +63,7 @@ export function Footer() {
             )}
             {mail && (
               <li>
-                <a href={mail} className={linkClass}>
+                <a href={mail} className={`${linkClass} break-all`}>
                   {siteConfig.email}
                 </a>
               </li>
@@ -85,7 +88,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <Container className="flex flex-col items-center justify-between gap-2 py-6 text-sm text-white/60 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            © <CurrentYear /> {siteConfig.name}. All rights reserved.
           </p>
           <p>{siteConfig.tagline}</p>
         </Container>
