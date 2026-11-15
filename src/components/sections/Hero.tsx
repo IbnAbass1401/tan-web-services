@@ -91,7 +91,7 @@ export function Hero() {
             className="text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-5xl lg:text-6xl"
           >
             We Build Digital Experiences That Move Businesses{" "}
-            <span className="bg-linear-to-r from-ocean to-[#3d9ab8] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-ocean to-[#3d9ab8] bg-clip-text text-transparent">
               Forward.
             </span>
           </h1>
@@ -112,9 +112,23 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
+          {/* Soft glow behind the laptop (gradient, no blur filter) */}
           <div
             aria-hidden="true"
-            className="absolute left-1/2 top-1/2 -z-10 h-[70%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-light/40 blur-3xl"
+            className="absolute left-1/2 top-1/2 -z-10 h-[80%] w-[90%] -translate-x-1/2 -translate-y-1/2"
+            style={{
+              background:
+                "radial-gradient(closest-side, rgba(111,177,196,0.5), rgba(111,177,196,0))",
+            }}
+          />
+          {/* Soft ground shadow under the laptop */}
+          <div
+            aria-hidden="true"
+            className="absolute bottom-[2%] left-[6%] right-[6%] -z-10 h-[9%]"
+            style={{
+              background:
+                "radial-gradient(closest-side, rgba(11,42,54,0.3), rgba(11,42,54,0))",
+            }}
           />
 
           <div className="float">
@@ -123,9 +137,10 @@ export function Hero() {
               alt="TAN Web Services website shown on a laptop screen"
               width={1457}
               height={955}
-              priority
+              preload
+              fetchPriority="high"
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="h-auto w-full drop-shadow-[0_30px_40px_rgba(11,42,54,0.25)]"
+              className="h-auto w-full"
             />
           </div>
 

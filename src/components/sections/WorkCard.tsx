@@ -36,7 +36,7 @@ export function WorkCard({ work }: { work: Work }) {
             {work.category}
           </p>
           <h3 className="text-xl font-extrabold tracking-tight">{work.name}</h3>
-          <p className="text-sm font-semibold text-navy/60">{work.tagline}</p>
+          <p className="text-sm font-semibold text-navy/70">{work.tagline}</p>
         </div>
 
         <p className="text-pretty text-navy/75">{work.description}</p>
@@ -65,7 +65,7 @@ export function WorkCard({ work }: { work: Work }) {
         </ul>
 
         {work.note && (
-          <p className="flex gap-2 text-xs text-navy/60">
+          <p className="flex gap-2 text-xs text-navy/70">
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
@@ -86,7 +86,10 @@ export function WorkCard({ work }: { work: Work }) {
         <div className="mt-auto pt-2">
           <Button href={work.liveUrl} arrow className="w-full sm:w-auto">
             Visit live demo
-            <span className="sr-only"> (opens in a new tab)</span>
+            <span className="sr-only">
+              {" "}
+              of {work.name} (opens in a new tab)
+            </span>
           </Button>
         </div>
       </div>

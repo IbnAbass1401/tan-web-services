@@ -3,14 +3,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { services } from "@/lib/services";
 import { ServiceCard } from "./ServiceCard";
 
-// Each card links somewhere real. No dead "Learn more" links.
+// Each card links somewhere real, with its own clear label.
 const links: Record<string, { href: string; label: string }> = {
-  "website-development": { href: "/pricing#starter", label: "See pricing" },
-  ecommerce: { href: "/pricing#ecommerce", label: "See pricing" },
-  "ui-ux-design": { href: "/#contact", label: "Talk to us" },
-  "school-management": { href: "/pricing#school", label: "See pricing" },
-  lms: { href: "/pricing#lms", label: "See pricing" },
-  "ai-lms": { href: "/pricing#ai-lms", label: "See pricing" },
+  "website-development": { href: "/pricing#starter", label: "See website pricing" },
+  ecommerce: { href: "/pricing#ecommerce", label: "See store pricing" },
+  "ui-ux-design": { href: "/#contact", label: "Talk to us about design" },
+  "school-management": { href: "/pricing#school", label: "See school portal pricing" },
+  lms: { href: "/pricing#lms", label: "See LMS pricing" },
+  "ai-lms": { href: "/pricing#ai-lms", label: "See AI LMS pricing" },
 };
 
 // Bento layout. Order differs on phone, tablet and desktop so there are no holes.
