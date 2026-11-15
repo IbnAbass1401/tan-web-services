@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -10,10 +12,9 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   title: {
     default: "TAN Web Services | Build. Grow. Scale.",
     template: "%s | TAN Web Services",
@@ -24,8 +25,16 @@ export const metadata: Metadata = {
     title: "TAN Web Services | Build. Grow. Scale.",
     description:
       "Websites, e-commerce, school management systems and LMS platforms built for growing businesses.",
+    siteName: siteConfig.name,
     type: "website",
     locale: "en_NG",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TAN Web Services | Build. Grow. Scale.",
+    description:
+      "Websites, e-commerce, school management systems and LMS platforms built for growing businesses.",
   },
 };
 
@@ -44,6 +53,7 @@ export default function RootLayout({
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />
+        <JsonLd />
       </body>
     </html>
   );
