@@ -12,19 +12,21 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const homeTitle = "TAN Web Services | Web Agency in Ilorin, Nigeria";
+const homeDescription =
+  "Web agency in Ilorin, Nigeria. We build websites, online stores, school management systems and learning platforms for businesses and schools.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   applicationName: siteConfig.name,
   title: {
-    default: "TAN Web Services | Build. Grow. Scale.",
+    default: homeTitle,
     template: "%s | TAN Web Services",
   },
-  description:
-    "TAN Web Services builds websites, e-commerce stores, school management systems and learning platforms for businesses in Nigeria and beyond.",
+  description: homeDescription,
   openGraph: {
-    title: "TAN Web Services | Build. Grow. Scale.",
-    description:
-      "Websites, e-commerce, school management systems and LMS platforms built for growing businesses.",
+    title: homeTitle,
+    description: homeDescription,
     siteName: siteConfig.name,
     type: "website",
     locale: "en_NG",
@@ -32,9 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TAN Web Services | Build. Grow. Scale.",
-    description:
-      "Websites, e-commerce, school management systems and LMS platforms built for growing businesses.",
+    title: homeTitle,
+    description: homeDescription,
   },
 };
 
