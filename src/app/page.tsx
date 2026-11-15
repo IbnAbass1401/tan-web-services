@@ -6,6 +6,7 @@ import { HighlightStrip } from "@/components/sections/HighlightStrip";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PricingTeaser } from "@/components/sections/PricingTeaser";
 import { Services } from "@/components/sections/Services";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Works } from "@/components/sections/Works";
 import { WhyTan } from "@/components/sections/WhyTan";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <WhyTan />
       <Works />
+      <Testimonials />
       <PricingTeaser />
       <Faq limit={5} />
       <Contact />
